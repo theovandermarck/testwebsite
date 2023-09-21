@@ -1,0 +1,90 @@
+/* Add these changes to your style.css file */
+
+:root {
+  --color-bg: #b9a3ff;
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+  font-size: 1.5rem;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  z-index: -1;
+  opacity: 0.1;
+  animation: move-background 10s linear infinite;
+}
+
+@keyframes move-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add these changes to your style.css file */
+
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 25px;
+  font-weight: bold;
+  color: var(--color-bg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.link:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-main);
+  border-color: var(--color-secondary);
+}
+
+/* Optional: add an active state to the buttons */
+.link:active {
+  transform: scale(0.95);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+th, td {
+  border: 1px solid var(--color-primary);
+  padding: 8px 16px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 0, 0.1);
+}
